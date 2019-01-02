@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Paint</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jscolor.js"></script>
+</head>
+<body>
+    <header>
+        <div class="half-first">
+            <input type="range" class="slider" value="8" min="1" max="50">
+            <input id="color" class="jscolor {onFineChange:'update(this)'}"
+            value="000000" disabled></input>
+        </div>
+        <div class="half-second">
+                <div class="shape new-file">
+                    <img src="new.png" width="40px" height="40px">
+                </div>
+                <div class="shape pencil">
+                    <img src="pencil.png" width="40px" height="40px">
+                </div>
+                <div class="shape line">
+                    <img src="line.png" width="40px" height="40px">
+                </div>
+                <div class="shape fill">
+                        <img src="fill.png" width="40px" height="40px">
+                </div>
+            </div>
+    </header>
+    <main id="main-content">
+        <canvas id="myCanvas" width="1000px" height="450px"></canvas>
+    </main>
+    <p id="para"></p>
+</body>
+</html>
